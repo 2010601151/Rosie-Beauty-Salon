@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KHT Beauty Salon - Professional beauty services, online appointment booking, and more.">
+    <meta name="keywords" content="Beauty Salon, Hair Styling, Makeup, Skincare">
+    <meta name="author" content="Roseline Beauty Salon">
+    <title>KHT Beauty Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Roseline Beauty Salon</h1>
+            <div class="menu-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Roseline Beauty Salon</h2>
+            <p>Your one-stop destination for professional beauty services.</p>
+            <a href="#appointment" class="btn">Book an Appointment</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Roseline Beauty Salon, we offer top-notch beauty services tailored to your needs. Our experienced professionals ensure you leave feeling fabulous.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Hair Styling</li>
+                <li>Makeup</li>
+                <li>Skincare Treatments</li>
+                <li>Manicures and Pedicures</li>
+                <li>Bridal Packages</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="Hairstyling.jpg" alt="Hair styling">
+                <img src="Makeupapplication.jpg" alt="Makeup application">
+                <img src="Skincaretreatment.jpg" alt="Skincare treatment">
+                <img src="Nailart.jpg" alt="Nail art">
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Our Blog</h2>
+            <article>
+                <h3>Top Beauty Trends of the Year</h3>
+                <p>Stay updated with the latest in beauty and fashion. <a href="#">Read More</a></p>
+            </article>
+            <article>
+                <h3>How to Choose the Right Skincare</h3>
+                <p>Tips and tricks for flawless skin. <a href="#">Read More</a></p>
+            </article>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"Absolutely loved the service at Roseline Beauty Salon! Highly recommended."</p>
+                <footer>- Min. Ephraim</footer>
+            </blockquote>
+            <blockquote>
+                <p>"Professional staff and amazing results every time!"</p>
+                <footer>- Sarah Lee</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p>Explore our previous work and get inspired.</p>
+            <div class="portfolio-grid">
+                <img src="imagesportfolio1.jpg" alt="Bridal makeup">
+                <img src="imagesportfolio2.jpg" alt="Creative hair styling">
+                <img src="imagesportfolio3.jpg" alt="Elegant nail art">
+            </div>
+        </div>
+    </section>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="https://th.bing.com/th?id=OIP.QH5gKFxERjtTRIGZAdEPVwHaHZ&w=250&h=249&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Instagram">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="https://th.bing.com/th?id=OIP.OiRP0Wt_nlImTXz5w45aRQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Twitter">
+        </a>
+    </div>
+
+    <!-- Christmas Popup Banner -->
+    <div class="christmas-popup">
+        <div class="popup-content">
+            <h2>Merry Christmas!</h2>
+            <p>Your appointment is confirmed! We wish you a joyful holiday season!</p>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <section id="appointment" class="appointment">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" onsubmit="sendToWhatsApp(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+        
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+        
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="hair">Hair Styling</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="skincare">Skincare</option>
+                </select>
+        
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="sendToWhatsApp(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message') ? document.getElementById('message').value : '';
+            const date = document.getElementById('date') ? document.getElementById('date').value : '';
+            const time = document.getElementById('time') ? document.getElementById('time').value : '';
+            const service = document.getElementById('service') ? document.getElementById('service').value : '';
+
+            // Construct the message to send via WhatsApp
+            let whatsappMessage = `*New Message from Website*\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+            if (date && time && service) {
+                whatsappMessage = `*New Appointment Request*\n\nName: ${name}\nEmail: ${email}\nDate: ${date}\nTime: ${time}\nService: ${service}`;
+            }
+
+            // WhatsApp link with pre-filled message
+            const whatsappLink = `https://wa.me/905428879931?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Open WhatsApp with the message
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Roseline Beauty Salon. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

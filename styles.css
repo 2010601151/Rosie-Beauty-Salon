@@ -1,0 +1,504 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #f00c91;
+    padding: 1rem 0;
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f400a3;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('Hairstyling.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: #ff1087;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e10677;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Services Section */
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.services ul li {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.services ul li:hover {
+    background-color: #ff1087;
+    color: white;
+}
+
+/* Gallery Section */
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Blog Section */
+.blog article {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.blog article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog article p {
+    font-size: 1.1rem;
+}
+
+.blog article a {
+    color: #ff1087;
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+    background-color: #fff;
+    padding: 2rem;
+    border-left: 5px solid #ff1087;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.testimonials footer {
+    text-align: right;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #070707;
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #444;
+}
+
+/* Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-media a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: #f00c91;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+
+    .services ul, .gallery .gallery-grid, .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Header Styles */
+header {
+    background: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* Navigation Menu Styles */
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #df05f3;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Responsive Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ee05da;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Responsive Navigation */
+header nav ul {
+    max-height: 0; /* Collapsed initially */
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+}
+
+header nav ul.show {
+    max-height: 300px; /* Enough to fit all items */
+    box-shadow: 0 2px 4px rgba(8, 8, 8, 0.938);
+    background: #0f000b;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav ul.show li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    header nav ul {
+        display: none; /* Initially hidden */
+        max-height: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul.show {
+        display: flex; /* Show on toggle */
+    }
+}
+/* Christmas Popup Styling */
+.christmas-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.christmas-popup .popup-content {
+    background-color: #f00c91;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.christmas-popup h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.christmas-popup p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.christmas-popup .close-btn {
+    background-color: #fff;
+    color: #f00c91;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.christmas-popup .close-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Snowflakes Animation */
+@keyframes snow {
+    0% {
+        top: -10%;
+        left: 50%;
+        opacity: 0.9;
+    }
+    100% {
+        top: 110%;
+        left: 50%;
+        opacity: 0;
+    }
+}
+
+.snowflake {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    animation: snow 10s linear infinite;
+    pointer-events: none;
+}
+
+.snowflake:nth-child(odd) {
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(even) {
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
